@@ -46,10 +46,10 @@ for (var i = 0; i < 20000; i++) {
   rede.propagate(taxaAprendizagem, [0])
 }
 
-var dvSaidas = document.getElementById('dvSaidas')
+var saidas = document.getElementById('saidas')
 
-// Saidas
-console.log( Math.round(rede.activate([0,0])) )
-console.log( Math.round(rede.activate([0,1])) )
-console.log( Math.round(rede.activate([1,0])) )
-console.log( Math.round(rede.activate([1,1])) )
+saidas.textContent = 
+  Math.round(rede.activate([0,0])) + '  ' +
+  Math.round(rede.activate([0,1])) + '  ' +
+  Math.round(rede.activate([1,0])) + '  ' +
+  Math.round(rede.activate([1,1]))
